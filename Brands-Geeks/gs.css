@@ -1,0 +1,374 @@
+/* a {
+   text-decoration: none;
+   color: black;
+
+}
+
+a:hover {
+   font-size: larger;
+   color: red;
+} 
+
+a:active {
+   color: green;
+} */
+h1 {
+   color: #d2ac47;
+} 
+body {
+   background-color:#f4f4f4;
+   background-repeat: no-repeat;
+   width: 80%;
+   height: 80%;
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+   font-size: 12px;
+   font-family: sans-serif;
+   color: #555;
+}
+/* a img {
+   height: 50px;
+   width: 50px;
+   border-radius: 100%;
+}
+a:hover img {
+   transform: scale(1.5);
+   box-shadow: 0 0 10px #f0c401;
+} */
+
+.container {
+   width: 50%;
+   
+}
+
+.box-1 {
+   background-color: rgb(168, 194, 224);
+   color: #d2ac47 ; 
+   font-size: 20px;
+   border: 5px teal solid;
+   padding: 20px;
+   margin: 20px;
+}
+
+
+.categories {
+   border: 1px #ccc solid;
+   padding: 10px;
+   border-radius: 15px;
+
+}
+
+.categories h2 {
+   text-align: center;
+}
+
+.categories ul {
+   padding: 0px;
+   list-style: none;
+   text-decoration: none;
+}
+
+
+
+.categories li {
+   border: 1px rgb(239, 100, 100) solid;
+   border-radius: 15px;
+   margin: auto;
+   border-width: 4px 4px;
+   position: absolute;
+   text-decoration: none;
+   border-style: inset;
+
+} 
+nav {
+   margin: 27px auto 0;
+   position: fixed;
+   width: 590px;
+   height: 50px;
+   background-color: #12111f;
+   border-radius: 8px;
+   font-size: 0;
+   margin-left: 10px;
+   position: relative;
+   display: inline-block;
+   /* display: inline;
+   list-style: ; */
+}
+
+
+
+nav a {
+   line-height: 50px;
+   height: 100%;
+   font-size: 15px;
+   display: inline-block;
+   position: relative;
+   z-index: 1;
+   text-decoration: none;
+   text-transform: uppercase;
+   text-align: center;
+   color: white;
+   cursor: pointer;
+}
+
+nav .animation {
+   position: relative;
+   height: 100%;
+   top: 0;
+   z-index: 0;
+   transition: all .5s ease 0s;
+   border-radius: 8px;
+}
+
+.logo {
+   margin-top: 50px;
+   margin-left: 50px;
+}
+
+a:nth-child(1) {
+   width: 100px;
+}
+
+a:nth-child(2) {
+   width: 110px;
+}
+
+a:nth-child(3) {
+   width: 100px;
+}
+
+a:nth-child(4) {
+   width: 160px;
+}
+
+a:nth-child(5) {
+   width: 120px;
+}
+/*================================*/
+/* nav .start-home,
+a:nth-child(1):hover~.animation {
+   width: 100px;
+   left: 0;
+   background-color: #f0c401;
+}
+
+a:nth-child(2):hover~.animation {
+   width: 110px;
+   left: 100px;
+   background-color: #f0c401;
+}
+
+a:nth-child(3):hover~.animation {
+   width: 100px;
+   left: 210px;
+   background-color: #f0c401;
+}
+
+a:nth-child(4):hover~.animation {
+   width: 160px;
+   left: 310px;
+   background-color: #f0c401;
+}
+
+a:nth-child(5):hover~.animation {
+   width: 120px;
+   left: 470px;
+   background-color: #f0c401;
+}  
+*/
+
+
+span {
+   color: #f0c401;
+}
+
+button {
+
+   border-radius: 10px;
+   padding: 6px;
+   border: none;
+   background-color: #12111f;
+   display: flex;
+
+   align-items: center;
+   top: 50%;
+   cursor: pointer;
+   overflow: hidden;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   justify-content: center;
+   vertical-align: middle;
+
+   background-image: linear-gradient(150deg, #f0c401, #f0c401 50%, #f0c401);
+}
+
+button span {
+   display: flex;
+   border-radius: 8px;
+   padding: 16px 50px;
+   font-size: 22px;
+   background-color: #12111f;
+   transition: 300ms;
+   color: white;
+}
+
+button:hover span {
+   background:local;
+   color: #12111f;
+}
+
+#frame1{
+   position:relative;
+   top: 0px;
+   left: 0px;
+   overflow: hidden;
+   pointer-events: none;
+   width: 10%;
+}
+.Header{
+   /* border:#12111f;
+   border-style: double;
+   border-color: #12111f; */
+   border-radius: 8px;
+   /*عشان متبقاش بوكس كبير */
+   display:inline;
+}
+.SearchBar {
+   margin-left: 350px;
+   border-style:double;
+   border-color: #d2ac47;
+   /* margin-inline: ; */
+   border-radius: 8px;
+} 
+h1{
+   display: inline;
+   font-family: impact,charcoal,sans-serif;
+   font-style: oblique;
+   
+}
+footer {
+margin-top: 2000px;   
+margin-left: 300px;
+border-style: double;
+border-color: #12111f;
+} 
+footer div
+{
+margin-right: 30px;
+
+}
+.wrap .btn {
+display: inline-block;
+height: 70px;
+width: 70px;
+margin: 0 25px;
+text-align: center;
+border-radius: 50px;
+overflow: hidden;
+float: left;
+box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.9),
+7px 7px 20px 0 rgba(11, 8, 104, 0.3);
+transition: all 0.4s ease-out;
+cursor: pointer;
+}
+.btn .icon {
+display: inline-block;
+height: 70px;
+width: 70px;
+background: #333;
+border-radius: 50px;
+float: left;
+box-shadow: inset -7px -7px 20px 0;
+}
+.btn span {
+font-size: 24px;
+font-weight: 600px;
+line-height: 70px;
+}
+.btn .icon i {
+font-size: 30px;
+line-height: 70px;
+color: #fff;
+transition: all 0.4s ease-out;
+}
+.btn:hover {
+width: 220px;
+transition: all 0.4s ease-out;
+}
+.btn:first-child:hover .icon {
+background: #3b5998;
+box-shadow: inset 1px 0 20px 0;
+}
+.btn:nth-child(2):hover .icon {
+background: #dd2a7b;
+box-shadow: inset 1px 0 20px 0;
+}
+.btn:nth-child(3):hover .icon {
+background: #00acee;
+box-shadow: inset 1px 0 20px 0;
+}
+.btn:last-child:hover .icon {
+background: #0e76a8;
+box-shadow: inset 1px 0 20px 0;
+}
+.btn:first-child:hover {
+color: #3b5998;
+}
+.btn:nth-child(2):hover {
+color: #dd2a7b;
+}
+.btn:nth-child(3):hover {
+color: #00acee;
+}
+.btn:last-child:hover {
+color: #0e76a8;
+}
+/* background */
+:root {
+   --direction: -45deg; 
+ }
+ 
+ /* body {
+   margin: 0;
+   padding: 0;
+ }
+  */
+ main {
+   position:relative;
+ }
+ 
+ div.background
+ {
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 50vh;
+   background-size:30%;
+   background-repeat:none;
+ }
+ div.foreground
+ {
+   position:absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 50vh;
+   background-size:30%;
+   background-repeat:none;
+ }
+ 
+ 
+ .background {
+  
+   background-image: url(78749730-B489-4239-92DC-6210C311D3B1.JPEG);
+  
+ }
+ 
+ .foreground {
+   background-image: url(IMG_7336.JPG);
+   mask-image: linear-gradient(var(--direction), rgba(0,0,0,1) 40%, rgba(0,0,0,0) 60%);
+   mask-position: 100% 100%;
+}

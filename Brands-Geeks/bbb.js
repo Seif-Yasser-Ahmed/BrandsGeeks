@@ -1,6 +1,6 @@
 let c = 45;
 
-function draw(){
+function draw() {
   document.documentElement.style.setProperty('--direction', c++ + 'deg');
   requestAnimationFrame(draw);
 }

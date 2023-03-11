@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brands Geeks-test</title>
+    <script type="text/javascript" src='bbb.js'></script>
+</head>
+
+<body>
+
+    <div class="container mt-5 ">
+        <form>
+            <div class="form-group"> <!--username-->
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text btn"> @ </span> <!--3lama gmb alusername shklha helw-->
+                    </div>
+                    <input placeholder="username" id="name" class="form-control" type="text">
+                </div>
+            </div>
+
+
+            <div class="form-group"> <!--email bel 3lama bardo-->
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group"> <!--email 3adi-->
+                <label>email</label>
+                <input placeholder="Type your email here" class="form-control" type="email">
+                <SMAll class="form-text text-muted">For ex: yourname123@gmail.com</SMAll>
+                <!--klam mktob t7to zy warnings kda-->
+            </div>
+
+
+            <div class="form-group">
+                <label>password</label><!--password-->
+                <input placeholder="Choose a Hard password" class="form-control" type="password">
+            </div>
+
+
+            <div class="form-group"> <!--selector-->
+                <select class="form-control">Select
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+
+
+            <div class="form-check"> <!--checkbox for terms mslan-->
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label">Check me out</label>
+            </div>
+
+
+            <button class="btn btn-primary ">Submit</button> <!--submit button lel login-->
+
+        </form>
+
+    </div>
+
+    <br><br><br><br><br>
+
+    <nav>
+        <ul class="breadcrumb"> <!--shabh navbar bas ithink mlha4 lazma hn4of we7na bnzbt alhome page-->
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Hoodies</a></li>
+            <li class="breadcrumb-item"><a href="#">Jackets</a></li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!--for large screen only-->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" style="color: #ffc107; " href="#"> <!--logo w asm albrand-->
+                <img src="logo.jpg" width="30" height="30" style="border-radius:100%; " class="d-inline-block align-top"
+                    alt="Logo" loading="lazy">
+                BRANDS GEEKS
+            </a>
+        </nav>
+        <a href="#navbr" data-toggle="collapse" class="navbar-toggler"> <!--icon elnavbar fel small screens-->
+            <span class="navbar-toggler-icon"></span>
+        </a>
+        <div class="collapse navbar-collapse r" id="navbr"> <!--navbar dynamic m3 7agm elshasha aly m38lah  -->
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Hoodies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Jackets</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">Jeans</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Cargo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Oversize</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sweershirts</a>
+                </li>
+                <li class="nav-item dropdown"> <!--hena n7ot link page feha social media w sowarna   -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <h6 class="collapse dropdown-item">To reduce effort and time for customers,<br> we came with the
+                            idea of our website which is collecting all local brands in Egypt in one place <br> since
+                            local
+                            brands in Egypt have stepped up and become better and cheaper than International brands.
+                        </h6>
+                    </div>
+                </li>
+            </ul>
+            <nav class="navbar navbar-dark bg-dark">
+
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+
+    </nav>
+
+    <br><br><br>
+
+    <div id="slide" class="carousel slide container w-75"> <!--slider alsowar-->
+        <ol class="carousel-indicators">
+            <li data-target="#slide" data-slide-to="0" class="active"></li> <!--awl sora btzhar-->
+            <li data-target="#slide" data-slide-to="1"></li>
+            <li data-target="#slide" data-slide-to="2"></li>
+            <li data-target="#slide" data-slide-to="3"></li>
+            <li data-target="#slide" data-slide-to="4"></li>
+            <li data-target="#slide" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="221218143136-lionel-messi-world-cup-trophy-kiss-121822.jpg" alt="" class="w-100"
+                    style="height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="lionel-messi-fifa-world-cup-trophy-2022-winner-4k-wallpaper-uhdpaper.com-960@0@h.jpg" alt=""
+                    class="w-100" style="height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="logo.jpg" alt="" class="w-100" style="height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="mazen.jpg" alt="" class="w-100" style="height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="mazen2.jpg" alt="" class="w-100" style="height: 500px;">
+            </div>
+            <div class="carousel-item">
+                <img src="mazen3.jpg" alt="" class="w-100" style="height: 500px;">
+            </div>
+
+        </div>
+        <a href="#slide" class="carousel-control-next" data-slide="next"> <!--next slider-->
+            <span class="carousel-control-next-icon"></span> <!--icon next slider-->
+        </a>
+        <a href="#slide" class="carousel-control-prev" data-slide="prev"> <!--prev slider-->
+            <span class="carousel-control-prev-icon"></span> <!--icon prev slider-->
+        </a>
+    </div>
+
+
+    <br><br><br><br><br><br>
+
+
+    <button data-target="#aboutus" class="col-12 btn btn-secondary dropdown-toggle" data-toggle="collapse">About
+        Us</button> <!--zorar bytl3 klam t7to "collapse"-->
+    <h1 id="aboutus" class="collapse text-center">bla bla bla bla</h1>
+
+    <br><br><br><br><br><br>
+
+
+    <div class="dropdown text-center"> <!--zorar bas gowah links zy button kda "dropdown"-->
+        <div class="btn btn-primary dropdown-toggle" id="X" data-toggle="dropdown">Testing</div>
+        <div class="dropdown-menu" aria-labelledby="X">
+            <a href="#" class="dropdown-item">Test 1</a>
+            <a href="#" class="dropdown-item">Test 2</a>
+            <a href="#" class="dropdown-item">Test 3</a>
+        </div>
+
+    </div>
+
+    <br><br><br><br><br><br>
+
+    <br><br><br><br><br><br>
+
+    <div class="container" style>
+        <div class="row justify-content-center text-center align-items-center"
+            style="height:100px; background: #d2ac47 ">
+            <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-3 ">left</div>
+            <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-3 ">center</div>
+            <div class="col-6 col-sm-3 col-md-3 col-lg-2 col-xl-3 ">right</div>
+
+        </div>
+        <br>
+        <div class="btn btn-outline-dark justify-content-center align-items-center">Submit
+        </div>
+        <div class="btn-group btn-primary">
+            <div class="btn">1</div>
+            <div class="btn">2</div>
+            <div class="btn">3</div>
+            <div class="btn">4</div>
+        </div>
+        <br>
+        <hr>
+        <div class="row bg-dark">
+            <div class="col-8 m-1">
+                <div class="btn btn-primary">Left</div>
+            </div>
+            <div class="col-2 mt-1">
+                <div class="btn btn-primary">Right</div>
+            </div>
+            <div class="col-1 mt-1">
+                <div class="btn btn-primary">Right</div>
+            </div>
+        </div>
+
+        <div class="row bg-primary">
+            <div class="col text-center">
+                <div class="btn btn-dark">Center</div>
+            </div>
+        </div>
+        <div class="row bg-dark">
+            <div class="col m-1">
+                <div class="btn btn-primary">left</div>
+            </div>
+            <div class="col m-1  text-center">
+                <div class="btn btn-primary">center</div>
+            </div>
+            <div class="col m-1 text-right">
+                <div class="btn btn-primary ">right</div>
+            </div>
+
+        </div>
+        <br>
+        <hr>
+        <div class="card align-items-center text-center" style="width:18rem; border-radius: 15px;">
+            <img src="download.jpeg" class="card-img-top"
+                style="border-top-right-radius:15px; border-top-left-radius: 15px;" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Hoodie</h1>
+                <p class="card-text">Our first published hoodie</p>
+                <div class="btn btn-outline-primary text-center">Buy</div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="btn btn-primary">
+            <div class="badge badge-light p-2">Try our products</div>
+        </div>
+
+        <br><br><br>
+
+    </div>
+    <div class="modal-footer">
+        <p>&copy; 2023 BrandsGeeks. All rights reserved.</p>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

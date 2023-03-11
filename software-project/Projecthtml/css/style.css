@@ -1,0 +1,225 @@
+/* a {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:hover {
+    font-size: larger;
+    color: red;
+} */
+
+/* a:active {
+    color: green;
+} */
+h1 {
+    color: green;
+}
+
+body {
+    background-color: bisque;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #f0c401;
+
+}
+
+
+a img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+a:hover img {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px #f0c401;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.box-1 {
+    /* background-color: rgb(168, 194, 224);
+    color: rgb(0, 0, 0); */
+    font-size: 20px;
+    border: 5px teal solid;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+/* .categories {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.categories h2 {
+    text-align: center;
+}
+
+.categories ul {
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+.categories li {
+    border: 1px rgb(239, 100, 100) solid;
+    border-radius: 15px;
+    margin: auto;
+    border-width: 4px 4px;
+    position: absolute;
+    text-decoration: none;
+    border-style: inset;
+
+} */
+nav {
+    margin: 27px auto 0;
+    position: relative;
+    width: 590px;
+    height: 50px;
+    background-color: #12111f;
+    border-radius: 8px;
+    font-size: 0;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    /* display: inline;
+    list-style: ; */
+}
+
+
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+.logo {
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+
+a:nth-child(2) {
+    width: 110px;
+}
+
+a:nth-child(3) {
+    width: 100px;
+}
+
+a:nth-child(4) {
+    width: 160px;
+}
+
+a:nth-child(5) {
+    width: 120px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #f0c401;
+}
+
+a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #f0c401;
+}
+
+a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+    background-color: #f0c401;
+}
+
+a:nth-child(4):hover~.animation {
+    width: 160px;
+    left: 310px;
+    background-color: #f0c401;
+}
+
+a:nth-child(5):hover~.animation {
+    width: 120px;
+    left: 470px;
+    background-color: #f0c401;
+}
+
+
+
+span {
+    color: #f0c401;
+}
+
+button {
+
+    border-radius: 10px;
+    padding: 6px;
+    border: none;
+    background-color: #12111f;
+    display: flex;
+
+    align-items: center;
+    top: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    vertical-align: middle;
+
+    background-image: linear-gradient(150deg, #f0c401, #f0c401 50%, #f0c401);
+}
+
+button span {
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 50px;
+    font-size: 22px;
+    background-color: #12111f;
+    transition: 300ms;
+    color: white;
+}
+
+button:hover span {
+    background: transparent;
+    color: #12111f;
+}

@@ -12,6 +12,7 @@ html {
     height: 300px;
 }
 
+/*seperators*/
 .spikes {
     position: relative;
     background: white;
@@ -54,51 +55,6 @@ html {
     max-width: 100%;
 }
 
-.cart a i {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #6c757d;
-    /*to make the icon bordered*/
-    color: transparent;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    text-decoration: none;
-}
-
-.cart a i:hover {
-    color: #f8f9fa;
-}
-
-.choice {
-    display: inline;
-}
-
-.choice li {
-    list-style: none;
-    display: inline;
-}
-
-.choice li a {
-    text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: fit-content;
-    margin: auto;
-    color: #343a40;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    border: 4.5px solid #007bff;
-    border-radius: 15px;
-    height: fit-content;
-    font-size: 50px;
-    transition: .3s;
-}
-
-.choice li a:hover {
-    background-color: #007bff;
-}
-
 .title-section {
     margin-top: 20px;
     margin: 0 auto 88px;
@@ -118,43 +74,22 @@ html {
     cursor: default;
 }
 
-.go-down {
-    color: var(--main-color);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: var(--main-transition);
-}
-
-.go-down:hover {
-    color: var(--main-color-alt);
-}
-
-.go-down i {
-    animation: bouncing 1.5s infinite;
-}
-
 .cards img {
     align-items: stretch;
 }
 
-/* .title-section::before,
-.title-section::after {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: #d2ac47;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
+/*cart icon navbar*/
+.cart a i {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #6c757d;
+    /*to make the icon bordered*/
+    color: transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    text-decoration: none;
 }
 
-.title-section::before {
-    left: -30px;
+.cart a i:hover {
+    color: #f8f9fa;
 }
-
-.title-section::after {
-    right: -30px;
-} */

@@ -65,11 +65,11 @@ html {
     transition: .3s;
     text-transform: uppercase;
     color: #343a40;
-    border-color: #007bff;
+    border-color: #97978d;
 }
 
 .title-section:hover {
-    background-color: #007bff;
+    background-color: #97978d;
     transform: translateY(-10px);
     cursor: default;
 }
@@ -91,5 +91,5 @@ html {
 }
 
 .cart a i:hover {
-    color: #f8f9fa;
+    color: #97978d;
 }

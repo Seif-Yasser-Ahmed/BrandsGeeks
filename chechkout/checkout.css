@@ -43,12 +43,12 @@
 }
 
 .footer .box a:hover {
-    color: #007bff;
+    color: #97978d;
 }
 
 .footer .box .text {
     line-height: 2;
-    color: #007bff;
+    color: #97978d;
     font-size: 50px;
     text-align: center;
 }
@@ -74,7 +74,7 @@
 }
 
 .thankyou h3 a:hover {
-    color: #007bff;
+    color: #97978d;
 }
 
 /*end thankyou page*/

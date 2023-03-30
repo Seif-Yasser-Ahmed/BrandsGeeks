@@ -108,7 +108,7 @@ form .input-field {
   background-color: rgba(19, 18, 18, 0.8);
   ;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .button input:hover {

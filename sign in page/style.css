@@ -85,7 +85,7 @@ form input {
   border-radius: 5px;
   border: 1px solid #bfbfbf;
   border-bottom-width: 2px;
-  transition: all 0.2s ease;
+  transition: 0.3s;
 }
 
 form .field input:focus,
@@ -109,7 +109,7 @@ form .field.error input {
 .input-area .icon {
   left: 15px;
   color: #bfbfbf;
-  transition: color 0.2s ease;
+  transition: color 0.3s;
 }
 
 .input-area .error-icon {
@@ -170,7 +170,7 @@ form input[type="submit"] {
   background: rgba(19, 18, 18, 0.8);
   cursor: pointer;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 form input[type="submit"]:hover {

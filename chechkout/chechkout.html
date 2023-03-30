@@ -62,119 +62,122 @@
                 </table>
             </div><!--table container end-->
         </div><!-- cart container end-->
-        <div class="container ms-1 w-50 " id="information"> <!-- information container start -->
-            <div class="row g-3">
-                <div class="mb-3 col">
-                    <label for="fisrtname" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstname" placeholder="Brands">
+        <form action="#" id="form">
+            <div class="container ms-1 w-50 " id="information"> <!-- information container start -->
+                <div class="row g-3">
+                    <div class="mb-3 col">
+                        <label for="fisrtname" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Brands" required>
+                    </div>
+                    <div class="mb-3 col">
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Geeks" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="mobilenumber" class="form-label">Mobile Number</label>
+                    <input type="number" class="form-control" id="mobilenumber" placeholder="01XXXXXXXXX"
+                        pattern="[0-9]{11}">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="BrandsGeeks@gmail.com" required>
                 </div>
                 <div class="mb-3 col">
-                    <label for="lastname" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Geeks">
+                    <label for="address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="12-BG Street" required>
                 </div>
-            </div>
-            <div class="mb-3">
-                <label for="mobilenumber" class="form-label">Mobile Number</label>
-                <input type="number" class="form-control" id="mobilenumber" placeholder="01XXXXXXXXX">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="BrandsGeeks@gmail.com">
-            </div>
-            <div class="mb-3 col">
-                <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="12-BG Street">
-            </div>
-            <div class="row g-3">
-                <div class="">
-                    <label for="country" class="form-label">Country</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select your country</option>
-                        <option value="1">Egypt</option>
-                        <option value="2">USA</option>
-                        <option value="3">Saudi Arabia</option>
-                    </select>
-                </div>
-                <div class="">
-                    <label for="City" class="form-label">City</label>
-                    <input type="text" class="form-control" id="City" placeholder="Cairo">
+                <div class="row g-3">
+                    <div class="">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected>Select your country</option>
+                            <option value="1">Egypt</option>
+                            <option value="2">USA</option>
+                            <option value="3">Saudi Arabia</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label for="City" class="form-label">City</label>
+                        <input type="text" class="form-control" id="City" placeholder="Cairo" required>
 
-                </div>
-                <div class="">
-                    <label for="zip" class="form-label">Zip Code</label>
-                    <input type="text" class="form-control" id="zip" placeholder="32987">
-                </div>
-                <div class="">
-                    <label for="building" class="form-label">Building No. & Street Name</label>
-                    <input type="text" class="form-control" id="building" placeholder="">
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="floor" class="form-label">Floor No.</label>
-                        <input type="text" class="form-control" id="floor" placeholder="">
                     </div>
-                    <div class="col">
-                        <label for="apart" class="form-label">Apartment No.</label>
-                        <input type="text" class="form-control" id="apart" placeholder="">
+                    <div class="">
+                        <label for="zip" class="form-label">Zip Code</label>
+                        <input type="text" class="form-control" id="zip" placeholder="32987" pattern="[0-9]{5}">
                     </div>
-                </div>
-            </div>
-            <hr>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="visa">
-                <label class="form-check-label" for="visa">
-                    Visa/Mastercard
-                </label>
-                <div class="">
-                    <label for="cardno" class="form-label">Card Number</label>
-                    <input type="text" class="form-control" id="cardno" placeholder="">
-                </div>
-                <div class="">
-                    <label for="cardname" class="form-label">Card Holder Name</label>
-                    <input type="text" class="form-control" id="cardname" placeholder="">
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label for="">Expiry Date</label>
-                        <div class="col mb-2">
-                            <input type="number" min="1" max="12" step="1" class="form-control" id="cardname"
-                                placeholder="MM">
+                    <div class="">
+                        <label for="building" class="form-label">Building No. & Street Name</label>
+                        <input type="text" class="form-control" id="building" placeholder="Building-11" required>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="floor" class="form-label">Floor No.</label>
+                            <input type="text" class="form-control" id="floor" placeholder="Floor-74" required>
                         </div>
                         <div class="col">
-                            <input type="number" class="form-control" min="2023" max="2040" step="1" id="cardname"
-                                placeholder="YYYY">
+                            <label for="apart" class="form-label">Apartment No.</label>
+                            <input type="text" class="form-control" id="apart" placeholder="Apartment-14" required>
                         </div>
                     </div>
-                    <div class="col">
-                        <label for="cvv">CVV</label>
-                        <input type="number" min="0" max="999" step="1" class="form-control" id="cardname"
-                            placeholder="">
+                </div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="visa">
+                    <label class="form-check-label" for="visa">
+                        Visa/Mastercard
+                    </label>
+                    <div class="">
+                        <label for="cardno" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="cardno" placeholder="" required pattern="[0-9]{16}">
+                    </div>
+                    <div class="">
+                        <label for="cardname" class="form-label">Card Holder Name</label>
+                        <input type="text" class="form-control" id="cardname" placeholder="" required>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Expiry Date</label>
+                            <div class="col mb-2">
+                                <input type="number" min="1" max="12" step="1" class="form-control" id="cardname"
+                                    placeholder="MM">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" min="2023" max="2040" step="1" id="cardname"
+                                    placeholder="YYYY">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="cvv">CVV</label>
+                            <input type="number" pattern="[0-9]{3}" step="1" class="form-control" id="cardname"
+                                placeholder="">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="cash">
-                <label class="form-check-label" for="cash">
-                    Cash on delivery
-                </label>
-            </div>
-            <hr>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    I've read and accepted all <a href="">Terms and Conditions</a>
-                </label>
-                <ul>
-                    <li>You can now submit a return request through your account, automatically to ensure a smooth
-                        exchange
-                        and return process.</li>
-                </ul>
-            </div>
-            <div class="d-grid gap-2">
-                <button class="btn btn-outline-primary" type="button" onclick="window.location.href='typage.html'">Place
-                    Order</button> <!--onclick attribute is to move you to another html page-->
-            </div>
-        </div> <!-- information container end -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="cash">
+                    <label class="form-check-label" for="cash">
+                        Cash on delivery
+                    </label>
+                </div>
+                <hr>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        I've read and accepted all <a href="">Terms and Conditions</a>
+                    </label>
+                    <ul>
+                        <li>You can now submit a return request through your account, automatically to ensure a smooth
+                            exchange
+                            and return process.</li>
+                    </ul>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-primary" type="submit" id="checkout-btn">Place
+                        Order</button> <!--onclick attribute is to move you to another html page-->
+                </div>
+            </div> <!-- information container end -->
+        </form>
     </div> <!-- main end-->
     <!-- start footer -->
     <div id="footer" class="footer">

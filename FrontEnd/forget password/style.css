@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(179, 178, 178, 0.8), rgba(179, 178, 178, 0.8)), url(../Brand_Geeks-page-0-removebg.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15rem 0;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.lock-icon {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 12px;
+}
+
+.passInput {
+    margin-top: 15px;
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    font-size: 15px;
+    outline: none;
+}
+
+button {
+    margin-top: 15px;
+    width: 80%;
+    background: rgba(19, 18, 18, 0.8);
+    border: none;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #97978d;
+    cursor: pointer;
+
+}

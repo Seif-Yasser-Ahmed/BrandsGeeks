@@ -1,0 +1,84 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{%static 'images/Brand_Geeks-page-0-removebg.png'%}" type="image/x-icon">
+    <!--tab logo-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/signup.css'%}" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <title>Sign up</title>
+
+</head>
+
+<body style="background-image:linear-gradient(rgba(179, 178, 178, 0.8),rgba(179, 178, 178, 0.8)),
+url('/static/images/Brand_Geeks-page-0-removebg.png') ;">
+    <div class="container">
+        <header>Signin</header>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="email" placeholder="Enter your email" required class="email" name="username" />
+                </div>
+                <span class="error email-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">Please enter a valid email</p>
+                </span>
+            </div>
+            <br>
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your first anme" required class="email" name="fname" />
+                </div>
+
+            </div>
+            <br>
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Enter your last name" required class="email" name="lname" />
+                </div>
+
+            </div>
+            <br>
+            <div class="field create-password">
+                <div class="input-field">
+                    <input type="password" placeholder="Create password" required class="password" name="pass1" />
+                    <i class="bx bx-hide show-hide"></i>
+
+                </div>
+                <span class="error password-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">
+                        Please enter atleast 8 charatcer with number, symbol, small and
+                        capital letter.
+                    </p>
+                </span>
+            </div>
+            <br>
+            <div class="field confirm-password">
+                <div class="input-field">
+                    <input type="password" placeholder="Confirm password" required class="cPassword" name="pass2" />
+                    <i class="bx bx-hide show-hide"></i>
+                </div>
+                <span class="error cPassword-error">
+                    <i class="bx bx-error-circle error-icon"></i>
+                    <p class="error-text">Password don't match</p>
+                </span>
+            </div>
+            <br>
+            <div class="input-field button">
+                <input type="submit" value="Submit Now" />
+            </div>
+        </form>
+    </div>
+
+    <!-- <script src="{% static 'js/signup.js'%}"></script> -->
+</body>
+
+</html>

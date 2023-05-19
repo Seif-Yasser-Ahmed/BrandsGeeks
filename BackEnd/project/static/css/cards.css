@@ -1,0 +1,95 @@
+:root {
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.all-cards img {
+    height: 300px;
+}
+
+/*seperators*/
+.spikes {
+    position: relative;
+    background: white;
+}
+
+.spikes::after {
+    content: '';
+    position: absolute;
+    margin-top: -25px;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    height: 30px;
+    background-size: 30px;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+}
+
+.articles {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-color: #ececec;
+}
+
+.articles .box {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform var(--main-transition), box-shadow var(--main-transition);
+}
+
+.articles .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.articles .box img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.title-section {
+    margin-top: 20px;
+    margin: 0 auto 88px;
+    border: 3px solid;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: fit-content;
+    transition: .3s;
+    text-transform: uppercase;
+    color: #343a40;
+    border-color: #97978d;
+}
+
+.title-section:hover {
+    background-color: #97978d;
+    transform: translateY(-10px);
+    cursor: default;
+}
+
+.cards img {
+    align-items: stretch;
+}
+
+/*cart icon navbar*/
+.cart a i {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #6c757d;
+    /*to make the icon bordered*/
+    color: transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.cart a i:hover {
+    color: #97978d;
+}

@@ -1,0 +1,8 @@
+{
+    "window.autoDetectColorScheme": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
+}

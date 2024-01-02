@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cards.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/footer.css' %}"> <!--footer css file-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cards.css' %}"> <!--cards css file-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cart.css' %}"> <!--cards css file-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/checkout.css'%}"> <!--checkout css file-->
+    <!-- <link rel="stylesheet" href="{%static 'css/bootstrap.css' %}"> -->
+    <link rel="shortcut icon" href="/static/images/Brand_Geeks-page-0-removebg.png" type="image/x-icon"> <!--tab logo-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+        function getToken(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        const csrftoken = getToken('csrftoken');
+    </script>
+    <title>BrandsGeeks</title>
+
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookiePair = cookieArr[i].split("=");
+
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1]);
+                }
+            }
+            return null;
+        }
+
+        var cart = JSON.parse(getCookie('cart'))
+        if (cart == undefined) {
+            cart = {}
+            console.log('cart was created!')
+            document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
+        }
+
+        console.log('Cart:', cart)
+    </script>
+</head>
+
+<body>
+    {% block content %}
+    {% endblock content %}
+
+    <script type="text/javascript" src="{% static 'js/cart1.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="
+        sha384-36qa4849b1E2+poT4WnyKhv5vZF5SrPooiEjwBvKU7imGFAV@wwj1yYforSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https: //cdn.jsdelivr.net/npm/popper . js@1.16.0/dist/umd/ popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2m3bHaEW1d1v19T0Y5n3zV9ZzTtmI3UksdORVvoXMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="
+sha384-wfSDF2E50Y2D1uUdj003uMB3njuUD41h7YwaYd11qfktjoUod8GCEx130g8úfwB6" crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>

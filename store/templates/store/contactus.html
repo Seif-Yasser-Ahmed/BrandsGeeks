@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message Us</title>
+    <link rel="stylesheet" href="{% static 'css/contactus.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/Brand_Geeks-page-0-removebg.png'%}" type="image/x-icon">
+    <!--tab logo-->
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-image:linear-gradient(rgba(179, 178, 178, 0.8),rgba(179, 178, 178, 0.8)),
+url('/static/images/Brand_Geeks-page-0-removebg.png') ;">
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one">Abdo Basha</div>
+                    <div class="text-one">FOE Ain Shams university</div>
+                    <div class="text-one">Credit building</div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one">+201090555883</div>
+                    <div class="text-one">+201274591803</div>
+                    <div class="text-one">+201554637366</div>
+                    <div class="text-one">+201027070086</div>
+                    <div class="text-one">+201205444498</div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <a href="mailto:21p0102@eng.asu.edu.eg" class="text-one">
+                        Brandgeeks@gmail.com
+                    </a>
+                    <a href="mailto:21p0117@eng.asu.edu.eg" class="text-one">info.Brandgeeks@gmail.com</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>If you have any suggestions to us or any type of queries related to our brand, you can send us
+                    message from
+                    here. It's our pleasure to help you.</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-box">
+                        <input name="name" type="text" required placeholder="Enter your name">
+                    </div>
+                    <div class="input-box">
+                        <input name="email" type="text" required placeholder="Enter your email">
+                    </div>
+                    <div class="input-box message-box">
+                        <input name="subject" type="text" required placeholder="Enter your Message">
+                    </div>
+                    <button class="btn btn-primary">Send now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

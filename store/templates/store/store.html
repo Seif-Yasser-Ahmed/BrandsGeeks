@@ -1,0 +1,341 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{%block content%}
+<!--start of navbar-->
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> <!--logo and brand's name-->
+            <img src="{% static 'images/Brand_Geeks-page-0-removebg.png' %}" width="100" height="100"
+                class="d-inline-block align-top" style="border-radius: 50%;" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!--to deal with different devices and screen sizes-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!--links in navbar-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a> <!--main page-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Hoodies">Hoodies</a> <!--goes to hoodies section-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Cargo">Cargo</a> <!--goes to Cargo section-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Jeans">Jeans</a> <!--goes to jeans section-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Oversized">Oversized</a> <!--goes to oversized section-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Jackets">Jackets</a> <!--goes to jackets section-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#footer">About Us</a> <!--goes to footer-->
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">Sign out</a> <!--goes to sign up href="signout"-->
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="signup">Sign up</a> <!--goes to sign up-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signin">Sign in</a> <!--goes to footer-->
+                </li>
+                {% endif %}
+
+                <li class="cart nav-item ms-2"> <!--cart icon-->
+                    <a href="{%url 'cart' %}" title="Go to cart">
+                        <i class="fa fa-shopping-cart fa-2x" style=" margin-top: 3px;">{{cartItems}}</i>
+
+                    </a>
+
+                </li>
+            </ul>
+
+            <form class="d-flex mt-2" role="search"> <!--search button-->
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button"
+                    autocomplete="off">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--end of navbar-->
+<nav class="container w-75">
+    <!--start of slides-->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button> <!--1st pic slide 0-->
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <!--2nd pic slide 1-->
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <!--3rd pic slide 2-->
+        </div>
+        <div class="carousel-inner"> <!--first pic slider-->
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="{% static 'images/hoodies/b1.JPEG' %}" class="d-block w-100" style="height: 600px;" alt="">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000"> <!--second pic slider-->
+                <img src="{% static 'images/oversize/12.jpg' %}" class="d-block w-100" style="height: 600px;" alt="">
+            </div>
+            <div class="carousel-item"> <!--third pic slider-->
+                <img src="{% static 'images/jackets/7.jpg' %}" class="d-block w-100" style="height: 600px;" alt="">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <!--prev button-->
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <!--next button-->
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--end of slider-->
+    <div class="all-cards">
+        <br><br><br><br><br><br><br><br>
+        <!--start of Hoodies section-->
+        <h2 id="Hoodies" class="text-center title-section">Hoodies</h2> <!--section header-->
+        <div class="spikes"></div> <!--seperators-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 articles">
+            {% for x in hoodie %}
+            <div class="col"> <!--first card-->
+                <div class="card text-center align-items-center box h-100">
+                    <img src="{{x.imageURL}}" class="card-img-top" alt=""> <!--product image-->
+                    <div class="card-body content">
+                        <h5 class="card-title">${{x.price}}</h5><!--product price-->
+                        <!-- <h6 class="card-body">{{x.content}}</h6> -->
+                        <br>
+                        <button data-product={{x.id}} data-action="add"
+                            class="btn btn-outline-primary text-center update-cart">Add To
+                            Cart</button> <!--buy btn-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Size
+                            </button> <!--size dropdown btn-->
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                <li><button class="dropdown-item" type="button">small</button></li>
+                                <li><button class="dropdown-item" type="button">Medium</button></li>
+                                <li><button class="dropdown-item" type="button">Large</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--end of Hoodies section-->
+        <br><br><br><br><br><br>
+        <!--start of Cargo section-->
+        <h2 id="Cargo" class="text-center title-section">Cargo</h2> <!--section header-->
+        <div class="spikes"></div> <!--seperators-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 articles">
+            {% for x in cargo %}
+            <div class="col"> <!--first card-->
+                <div class="card text-center align-items-center box h-100">
+                    <img src="{{x.imageURL}}" class="card-img-top" alt=""> <!--product image-->
+                    <div class="card-body content">
+                        <h5 class="card-title">${{x.price}}</h5><!--product price-->
+                        <!-- <h6 class="card-body">{{x.content}}</h6> -->
+                        <br>
+                        <button data-product={{x.id}} data-action="add"
+                            class="btn btn-outline-primary text-center  update-cart">Add To
+                            Cart</button>
+                        <!--buy btn-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Size
+                            </button> <!--size dropdown btn-->
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                <li><button class="dropdown-item" type="button">small</button></li>
+                                <li><button class="dropdown-item" type="button">Medium</button></li>
+                                <li><button class="dropdown-item" type="button">Large</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--end of Cargo section-->
+        <br><br><br><br><br><br>
+        <!--start of Jeans section-->
+        <h2 id="Jeans" class="text-center title-section">Jeans</h2> <!--section header-->
+        <div class="spikes"></div> <!--seperators-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 articles">
+            {% for x in jeans %}
+            <div class="col"> <!--first card-->
+                <div class="card text-center align-items-center box h-100">
+                    <img src="{{x.imageURL}}" class="card-img-top" alt=""> <!--product image-->
+                    <div class="card-body content">
+                        <h5 class="card-title">${{x.price}}</h5><!--product price-->
+                        <!-- <h6 class="card-body">{{x.content}}</h6> -->
+                        <br>
+                        <button data-product={{x.id}} data-action="add"
+                            class="btn btn-outline-primary text-center  update-cart">Add To
+                            Cart</button>
+                        <!--buy btn-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Size
+                            </button> <!--size dropdown btn-->
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                <li><button class="dropdown-item" type="button">small</button></li>
+                                <li><button class="dropdown-item" type="button">Medium</button></li>
+                                <li><button class="dropdown-item" type="button">Large</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--end of Jeans section-->
+        <br><br><br><br><br><br>
+        <!--start of Oversized section-->
+        <h2 id="Oversized" class="text-center title-section">Oversized</h2> <!--section header-->
+        <div class="spikes"></div> <!--seperators-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 articles">
+            {% for x in oversize %}
+            <div class="col"> <!--first card-->
+                <div class="card text-center align-items-center box h-100">
+                    <img src="{{x.imageURL}}" class="card-img-top" alt=""> <!--product image-->
+                    <div class="card-body content">
+                        <h5 class="card-title">${{x.price}}</h5><!--product price-->
+                        <!-- <h6 class="card-body">{{x.content}}</h6> -->
+                        <br>
+                        <button data-product={{x.id}} data-action="add"
+                            class="btn btn-outline-primary text-center  update-cart">Add To
+                            Cart</button>
+                        <!--buy btn-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Size
+                            </button> <!--size dropdown btn-->
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                <li><button class="dropdown-item" type="button">small</button></li>
+                                <li><button class="dropdown-item" type="button">Medium</button></li>
+                                <li><button class="dropdown-item" type="button">Large</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--end of Oversized section-->
+        <br><br><br><br><br><br>
+        <!--start of Jackets section-->
+        <h2 id="Jackets" class="text-center title-section">Jackets</h2> <!--section header-->
+        <div class="spikes"></div> <!--seperators-->
+        <div class="row row-cols-1 row-cols-md-3 g-4 articles">
+            {% for x in jacket %}
+            <div class="col"> <!--first card-->
+                <div class="card text-center align-items-center box h-100">
+                    <img src="{{x.imageURL}}" class="card-img-top" alt=""> <!--product image-->
+                    <div class="card-body content">
+                        <h5 class="card-title">${{x.price}}</h5><!--product price-->
+                        <!-- <h6 class="card-body">{{x.content}}</h6> -->
+                        <br>
+                        <button data-product={{x.id}} data-action="add"
+                            class="btn btn-outline-primary text-center  update-cart">Add To
+                            Cart</button>
+                        <!--buy btn-->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Size
+                            </button> <!--size dropdown btn-->
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                                <li><button class="dropdown-item" type="button">small</button></li>
+                                <li><button class="dropdown-item" type="button">Medium</button></li>
+                                <li><button class="dropdown-item" type="button">Large</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!--end of Jackets section-->
+    </div>
+
+    <br><br>
+</nav>
+<!--start of the footer-->
+<div id="footer" class="footer">
+    <div class="container">
+        <div class="box"> <!--social media section-->
+            <a href="../">
+                <h3>Brands Geeks</h3>
+            </a>
+            <ul class="social" style="margin-right:30px ;">
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/seif.yasser.3781?mibextid=LQQJ4d"
+                        class="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="#" class="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://instagram.com/seif_yasser1011?igshid=YmMyMTA2M2Y="
+                        class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="#" class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="#" class="linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/Seif-Yasser-Ahmed/software-project.git" class="github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text"> AN EGYPTIAN LOCAL BRAND </p>
+        </div>
+        <div class="box"> <!--products' links section-->
+
+            <ul class="links">
+                <h4>Go check our products </h4>
+
+                <li><a href="#Hoodies">Hoodies</a></li>
+                <li><a href="#Cargo">Cargo</a></li>
+                <li><a href="#Jeans">Jeans</a></li>
+                <li><a href="#Oversized">Oversized</a></li>
+                <li><a href="#Jackets">Jackets</a></li>
+                <li><a href="contactus">Message Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-copyright py-3">&copy; 2023 Copyrights reserved</div> <!--copyrights sction-->
+</div>
+<!--end of the footer-->
+
+{% endblock content%}

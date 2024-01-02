@@ -1,0 +1,71 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="header">
+    <img src="{% static 'images/Brand_Geeks-page-0-removebg.png' %}" alt="">
+    <div class="headp">
+        <p> My Cart</p>
+    </div>
+</div>
+<div class="container">
+    <div class="cart">
+        <div class="products">
+            {% for item in items%}
+            <div class="product">
+                <img src="{{item.product.imageURL}}" width="200">
+                <div class="products-info">
+                    <h5 class="product-name" style="padding-top: 10px;">{{ item.product.name }}</h4>
+                        <h5 class="product-price"> EGP {{ item.product.price }}</h3>
+                            <p class="product-quantity update-cart" for="numberInput"> Qnt: <input class="update-cart"
+                                    data-product="{{item.product.id}}" id="numberInput" data-action=""
+                                    value="{{item.quantity}}" type="number" name="">
+                            <h6 class="product-price">Total= EGP {{item.get_total}}</h6>
+                            <p class="remove-product">
+                                <i class="fa fa-trash"></i>
+                                <span class="remove update-cart" data-action="remove-all"
+                                    data-product="{{item.product.id}}">Remove</span>
+                            </p>
+                            </p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="cart-total">
+                <p>
+                    <span>Total Price</span>
+                    <span>{{order.get_cart_total}}</span>
+                </p>
+                <p>
+                    <span>Number of Items in Cart</span>
+                    <span>{{order.get_cart_items}}</span>
+                </p>
+                <p>
+                    <span>Discout:</span>
+                    <span>0 EGP</span>
+                </p>
+                <a href="{%url 'checkout' %}">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var numberInputs = document.querySelectorAll('.update-cart input');
+
+            numberInputs.forEach(function (numberInput) {
+                var initialValue = numberInput.value;
+
+                numberInput.addEventListener('input', function () {
+                    var currentValue = numberInput.value;
+
+                    if (parseInt(currentValue) > parseInt(initialValue)) {
+                        numberInput.setAttribute('data-action', 'add');
+                    } else if (parseInt(currentValue) < parseInt(initialValue)) {
+                        numberInput.setAttribute('data-action', 'remove');
+                    } else {
+                        numberInput.setAttribute('data-action', '');
+                    }
+                });
+            });
+        });
+    </script>
+    {% endblock content %}

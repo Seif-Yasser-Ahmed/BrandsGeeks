@@ -1,0 +1,153 @@
+:root {
+    --main-transition: 0.3s;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: #191919;
+    padding: 70px 0 0;
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    /* specifies the widths of columns in the grid layout*/
+    gap: 40px;
+    /*specifies the gap between the 3 columns */
+}
+
+.footer .box a {
+    text-decoration: none;
+}
+
+.footer .box a h3 {
+    color: white;
+    font-size: 50px;
+    margin: 0 0 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.footer .box a h3:hover {
+    color: #97978d;
+}
+
+.footer .box .social {
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer .box .social li {
+    margin-right: 10px;
+    list-style: none;
+}
+
+.footer .box .social li a {
+    background-color: #313131;
+    color: #b9b9b9;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer .box .social .facebook:hover {
+    background-color: #3b5998;
+}
+
+.footer .box .social .twitter:hover {
+    background-color: #00acee;
+}
+
+.footer .box .social .youtube:hover {
+    background-color: #FF0000;
+}
+
+.footer .box .social .linkedin:hover {
+    background-color: #0077b5;
+}
+
+.footer .box .social .instagram:hover {
+    background-color: #C13584;
+}
+
+.footer .box .social .github:hover {
+    background-color: #171515;
+}
+
+.footer .box .text {
+    line-height: 2;
+    color: #97978d;
+    font-size: 50px;
+    text-align: center;
+}
+
+.footer .box .links li {
+    padding: 15px 0;
+    transition: var(--main-transition);
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer .box .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+.footer .box .links li:hover {
+    padding-left: 10px;
+}
+
+.footer .box .links li:hover a {
+    color: white;
+}
+
+.footer .box .links li a {
+    color: #b9b9b9;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer .box .links li a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #97978d;
+}
+
+.footer .footer-gallery {
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-gallery img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    margin: 2px;
+}
+
+.footer .box h4 {
+    font-size: 30px;
+    color: white;
+    margin: 0 0 20px;
+    text-align: left;
+}
+
+.footer .footer-copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: #6c757d;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+}

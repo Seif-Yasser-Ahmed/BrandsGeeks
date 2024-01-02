@@ -1,0 +1,82 @@
+#DIV {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#information {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#main {}
+
+#table {
+    width: 70%;
+    height: 70%;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+/*start footer*/
+.footer {
+    background-color: #191919;
+    padding: 70px 0 0;
+}
+
+.footer .box h3 {
+    color: white;
+    font-size: 50px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.footer .box a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer .box a:hover {
+    color: #97978d;
+}
+
+.footer .box .text {
+    line-height: 2;
+    color: #97978d;
+    font-size: 50px;
+    text-align: center;
+}
+
+.footer .footer-copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: #6c757d;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+}
+
+/*end footer*/
+/*start thankyou page*/
+.thankyou {
+    margin-top: 20%;
+}
+
+.thankyou h3 a {
+    text-decoration: none;
+    color: #343a40;
+    transition: 0.3s;
+}
+
+.thankyou h3 a:hover {
+    color: #97978d;
+}
+
+/*end thankyou page*/
